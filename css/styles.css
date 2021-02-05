@@ -5,7 +5,7 @@
   --font-sans: 'Karla', sans-serif;
   --font-serif: 'Lora', serif;
   --font-big: 60px;
-  --font-medium: 20px;
+  --font-medium: 25px;
   --font-small: 15px;
   --font-heavy: 700;
   --font-light: 400;
@@ -63,21 +63,21 @@ body {
   .list__item {
   font-size: var(--font-small);
   }
+    
+  .logo {
+    font-size: var(--font-medium);
+  }
 }
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .list__item {
-  font-size: var(--font-small);
+  font-size: var(--font-medium);
   }
 }
 
 /* shared code */
 @media all and (max-width: 750px) {
   .list__item {
-  font-size: var(--font-medium);
-  }
-
-  h1 {
-    font-size: var(--font-medium);
+/*  font-size: var(--font-medium);*/
   }
 }
