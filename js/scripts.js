@@ -21,3 +21,24 @@ let pokemonList = [
    types: ['fairy', 'water', 'ice'],
   }
 ];
+
+
+// Part 1: create a for loop that iterates over each item in pokemonList
+
+//for (let i=0; i < pokemonList.length; i++){
+//    document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ", " + " types: " + pokemonList[i].types + ") " + "</br>");
+//  }
+
+
+// Part 3: adding a conditional for height
+  for (let i=0; i < pokemonList.length; i++){
+    if (pokemonList[i].height <0.6){
+    document.write('<p>' + pokemonList[i].name + " (height: " + pokemonList[i].height + ", " + " types: " + pokemonList[i].types + ") " + " - That's a small one </p>");
+  } 
+  else if (pokemonList[i].height <1){
+    document.write('<p>' + pokemonList[i].name + " (height: " + pokemonList[i].height + ", " + " types: " + pokemonList[i].types + ") " + " - Kinda medium I guess </p>");
+  } 
+  else {
+    document.write('<p>' + pokemonList[i].name + " (height: " + pokemonList[i].height + ", " + " types: " + pokemonList[i].types + ") " + " - Wow, that’s big! </p>");
+  }
+  }
