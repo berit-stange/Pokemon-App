@@ -17,6 +17,7 @@
 
 body {
   margin: 0 auto;
+  max-width: 800px;
   font-family: var(--font-sans);
   font-weight: var(--font-light);
   font-size: var(--font-medium);
