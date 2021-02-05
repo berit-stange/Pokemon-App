@@ -1,0 +1,45 @@
+:root {
+  --primary-color: #e66771;
+  --secondary-color: gainsboro;
+  --dark-color: #002238;
+  --font-sans: 'Karla', sans-serif;
+  --font-serif: 'Lora', serif;
+  --font-big: 60px;
+  --font-medium: 20px;
+  --font-small: 15px;
+  --font-heavy: 700;
+  --font-light: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: var(--font-sans);
+  font-weight: var(--font-light);
+  font-size: var(--font-medium);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 30px;
+  text-align: center;
+}
+
+.page-header {
+  background-color: var(--primary-color);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  width: 100%;
+  padding: 20px;
+  border-color: var(--primary-color); 
+}
+.logo {
+  color: var(--dark-color);
+  font-family: var(--font-sans);
+  font-size: var(--font-big);
+  font-weight: var(--font-heavy);
+  text-decoration: none;
+}
