@@ -28,18 +28,56 @@ body {
 }
 
 .page-header {
-  background-color: var(--primary-color);
+  background-color: var(--dark-color);
   display: flex; 
   align-items: center; 
   justify-content: center; 
   width: 100%;
   padding: 20px;
-  border-color: var(--primary-color); 
 }
+
 .logo {
-  color: var(--dark-color);
+  color: var(--primary-color);
   font-family: var(--font-sans);
   font-size: var(--font-big);
   font-weight: var(--font-heavy);
   text-decoration: none;
+}
+
+
+/* --- 2021-02-05 css for js --- */
+
+.list__item {
+  width: 100%;
+  padding: 25px;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+  font-size: var(--font-medium);
+  box-sizing: border-box;
+}
+
+
+/* --- 2021-02-05 media queries --- */
+
+@media all and (max-width: 500px) {
+  .list__item {
+  font-size: var(--font-small);
+  }
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  .list__item {
+  font-size: var(--font-small);
+  }
+}
+
+/* shared code */
+@media all and (max-width: 750px) {
+  .list__item {
+  font-size: var(--font-medium);
+  }
+
+  h1 {
+    font-size: var(--font-medium);
+  }
 }
