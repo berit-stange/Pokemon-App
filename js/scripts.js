@@ -45,14 +45,14 @@ let pokemonList = [
 
 
 // TASK 1.5 --- PART 1: forEach loop
-  pokemonList.forEach(function(pokemon) {
-    if (pokemon.height <0.6){
-    document.write('<p  class="list__item">' + pokemonList.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - That's a small one </p>");
+pokemonList.forEach(function(pokemon) {
+    if (pokemon.height <0.5){
+    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - That's a small one </p>");
   } 
-  else if (pokemonList.height <1){
-    document.write('<p  class="list__item">' + pokemonList.name + "<br>" + "height: " + pokemonList.height + "<br>" + "types: " + pokemonList.types + "<br>" + " - Kinda medium I guess </p>");
+  else if (pokemon.height <0.6){
+    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - Kinda medium I guess </p>");
   } 
   else {
-    document.write('<p  class="list__item">' + pokemonList.name + "<br>" + "height: " + pokemonList.height + "<br>" + "types: " + pokemonList.types + "<br>" + " - Wow, that’s big! </p>");
+    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - Wow, that’s big! </p>");
   }
   })
