@@ -1,4 +1,4 @@
-// array of objects
+// List of Pokemons
 let pokemonRepository = (function () {
     let pokemonList = [
       { 
@@ -23,35 +23,66 @@ let pokemonRepository = (function () {
       }
     ];
     
+    
+    // function to add new Pokemons
     function add(item) {
-        pokemonList.push(item);
+        if (typeof(item) === 'object'){
+          if (Object.keys('name' + 'height' + 'types' in item)){
+            pokemonList.push(item);
+          }
+        }
+        else {
+            document.write('<p  class="error"> Check: not adding (wrong data type) </p>') 
+        }
     }
+    
+    
+    // returning the List of Pokemon
     function getAll() {
         return pokemonList;
     }
+    
+        
+    // add new Pokemon
+    function addListItem(pokemon){
+      let selectPokemon = document.querySelector('.pokemon-list');
+      let listItem = document.createElement('li');
+      let button = document.createElement('button');
+      button.addEventListener('click', function (event) {
+          showDetails(pokemon.name);
+        });
+      button.innerText = pokemon.name;
+      button.classList.add('list__item');
+      listItem.appendChild(button);
+      selectPokemon.appendChild(listItem);
+    }
+
+    
+    // show Details of Pokemon when button clicked
+    function showDetails(pokemon){
+      console.log(pokemon); 
+    }
+        
+    
     return {
         add: add,
-        getAll: getAll
-  };
+        getAll: getAll,
+        addListItem: addListItem 
+    };
 })();
 
-    let item =  {
-        name: 'Pikachu',
-        height: 2, 
-        types:'water'
-    }
-pokemonRepository.add(item);  
+//let item =  {
+//     name: 'Pikachu',
+//     height: 2, 
+//     types:'water'
+//    }
+//pokemonRepository.add(item);  
+// just checking the add function with a different syntax
+pokemonRepository.add({ name: 'Pikachu', height: 5, types:['electric', 'galvanic'] }); 
+pokemonRepository.add( 1 ); 
 
 
-// TASK 1.5 --- PART 2: forEach loop
+// TASK 1.6 --- Replacing document.write with new functions - now inside addListItem
 pokemonRepository.getAll().forEach(function (pokemon) {
-    if (pokemon.height <=0.6){
-    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - That's a small one </p>");
-  } 
-  else if (pokemon.height >0.6){
-    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - Kinda big </p>");
-  } 
-  else {
-    document.write('<p  class="list__item">' + pokemon.name + "<br>" + "height: " + pokemon.height + "<br>" + "types: " + pokemon.types + "<br>" + " - height missing </p>");
-  }
+    pokemonRepository.addListItem(pokemon);
   });

@@ -2,6 +2,7 @@
   --primary-color: #e5f060;
   --secondary-color: #f8f8f8;
   --dark-color: #001f72;
+  --accent-color: #fc01b1;
   --font-sans: 'Karla', sans-serif;
   --font-serif: 'Lora', serif;
   --font-big: 60px;
@@ -23,16 +24,18 @@ body {
   font-size: var(--font-medium);
   line-height: 1.6;
   background-color: var(--secondary-color);
-  color: var(--primary-color);
+  color: var(--dark-color);
   padding: 30px;
   text-align: center;
 }
 
+ul {
+  list-style-type: none;
+  display: inline;
+}
+
 .page-header {
   background-color: var(--dark-color);
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
   width: 100%;
   padding: 20px;
 }
@@ -47,20 +50,37 @@ body {
 
 
 /* --- 2021-02-05 css for js --- */
+button {
+  margin-bottom: 10px;
+}
 
 .list__item {
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   background-color: var(--primary-color);
   color: var(--dark-color);
   font-size: var(--font-medium);
+  font-weight: var(--font-heavy);
+  text-transform: uppercase;
   box-sizing: border-box;
+  border: none;
+}
+
+.error {
+  padding: 10px;
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  font-weight: var(--font-heavy);
 }
 
 
 /* --- 2021-02-05 media queries --- */
 
 @media all and (max-width: 500px) {
+  body{
+    font-size: var(--font-small);
+  } 
+
   .list__item {
   font-size: var(--font-small);
   }
