@@ -66,7 +66,7 @@ let pokemonRepository = (function () {
       item.imageUrl = details.sprites.other.dream_world.front_default;
       item.height = details.height;
       item.weight = details.weight;
-//      item.types = details.types;
+      item.types = details.types;
     }).catch(function (e) {
       console.error(e);
     });
@@ -99,11 +99,22 @@ let pokemonRepository = (function () {
 
       let contentElement2 = document.createElement('p');
       contentElement2.innerText = 'Weight: ' + pokemon.weight;
+       
+      let contentElementTypes = document.createElement('p');
+      contentElementTypes.innerText = 'Types: '; 
 
-//      let contentElement3 = document.createElement('p');
-//      contentElement3.innerText = 'Types: ' + pokemon.types;
-      // contentElement3.innerText = 'Types: ' + pokemon.types.type;
-      // contentElement3.innerText = 'Types: ' + pokemon.types.type.name;
+      // Types: rendering the array of objects
+      let typesArray = new Array;
+      pokemon.types.forEach((pokemonType) => {
+        typeStr = pokemonType.type.name;
+        typesArray.push(typeStr);
+        });
+      let typeElements = new Array;
+      typesArray.forEach((element3) => {
+        typeElement = document.createElement('p');
+        typeElement.innerText =  element3;
+        typeElements.push(typeElement);
+      });
       
       let imageElement = document.querySelector('#image-container');
       let pokeImage = document.createElement('img');
@@ -114,7 +125,11 @@ let pokemonRepository = (function () {
       modal.appendChild(titleElement);
       modal.appendChild(contentElement);
       modal.appendChild(contentElement2);
-//      modal.appendChild(contentElement3);
+      // appending types to modal:
+      modal.appendChild(contentElementTypes);
+      typeElements.forEach((contentElement3) => {
+        modal.appendChild(contentElement3);
+      });
       modal.appendChild(pokeImage);
       modalContainer.appendChild(modal);
 
