@@ -27,32 +27,54 @@ body {
   background-color: var(--secondary-color);
   color: var(--dark-color);
   padding: 30px;
+  padding-top: 80px;
   text-align: center;
 }
 
-ul {
+.poke-list {
   list-style-type: none;
   display: inline;
+  margin-top: 70px;
 }
 
 .page-header {
   background-color: var(--dark-color);
-  width: 100%;
-  padding: 20px;
+/*  color: var(--accent-color);  */
 }
 
-.logo {
-  color: var(--primary-color);
-  font-family: var(--font-sans);
-  font-size: var(--font-big);
-  font-weight: var(--font-heavy);
-  text-decoration: none;
+a {
+/*  font-size: var(--font-medium);*/
+  color: var(--accent-color);
 }
 
+a:hover {
+/*  font-size: var(--font-medium);*/
+  color: var(--accent-color);
+}
 
-/* --- 2021-02-05 css for js --- */
 button {
   margin-bottom: 10px;
+}
+
+.navbar-toggler{
+    color: var(--accent-color);
+    transform: rotate(90deg);
+}
+
+.navbar-brand{
+    font-size: var(--font-medium);
+}
+
+button:active{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+button:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .list__item {
@@ -67,6 +89,20 @@ button {
   border: none;
 }
 
+.list__item:hover{
+  background-color: var(--accent-color);
+  color: var(--dark-color);
+}
+
+.btn:active{
+  background-color: var(--dark-color);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+.btn:focus{
+  box-shadow: none;
+}
+
 .error {
   padding: 10px;
   background-color: var(--accent-color);
@@ -74,56 +110,18 @@ button {
   font-weight: var(--font-heavy);
 }
 
-/* MODAL 21.02.2021  ------------------------------------------------------ */
-
-#modal-container {
-  display: none;
+.modal{
+/*    display: grid;*/
+/*    justify-content: center;*/
 }
 
-#modal-container.is-visible {
-  display: grid;
-  /* grid:  */
-  position: fixed;
-  padding: 20px;
-  box-sizing: border-box;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--dark-opacity);
-  z-index: 999; /* to show it above other content */
-  overflow: auto; /* to allow scrolling if the screen is not high enough*/
-}
-
-.modal {
-  margin: auto;
-  display: inline-block;
-  box-sizing: border-box;
-  background: var(--secondary-color);
-  padding: 15px;
-  width: 100%;
-  max-width: 700px;
-  /* text-align: left; */
-  /* justify-content: center; */
-}
-
-.modal-close {
-  float: right;
-  -webkit-appearance: none;
-  border: 0;
-  background: none;
-  font-size: var(--font-medium);
-  color: var(--dark-color);
-  text-decoration: none;
-}
-
-.modal h1 {
+h1 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 0;
 }
 
-.modal p {
+p {
   margin-bottom: 0;
 }
 
