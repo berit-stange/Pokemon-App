@@ -145,7 +145,7 @@ let pokemonRepository = (function () {
 
 
 
-  pokemonRepository.loadList().then(function() {    // TASK 1.7 - Now the data is loaded!
+  pokemonRepository.loadList().then(function() {
   pokemonRepository.getAll().forEach(function(pokemon){
     pokemonRepository.addListItem(pokemon);
   });

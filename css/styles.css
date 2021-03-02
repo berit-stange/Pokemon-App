@@ -39,16 +39,13 @@ body {
 
 .page-header {
   background-color: var(--dark-color);
-/*  color: var(--accent-color);  */
 }
 
 a {
-/*  font-size: var(--font-medium);*/
   color: var(--accent-color);
 }
 
 a:hover {
-/*  font-size: var(--font-medium);*/
   color: var(--accent-color);
 }
 
@@ -110,10 +107,6 @@ button:focus{
   font-weight: var(--font-heavy);
 }
 
-.modal{
-/*    display: grid;*/
-/*    justify-content: center;*/
-}
 
 h1 {
   text-align: center;
@@ -142,7 +135,7 @@ p {
   } 
 
   .list__item {
-  font-size: var(--font-small);
+      font-size: var(--font-small);
   }
     
   .logo {
@@ -152,13 +145,13 @@ p {
 
 @media all and (min-width: 500px) and (max-width: 750px) {
   .list__item {
-  font-size: var(--font-medium);
+      font-size: var(--font-medium);
   }
 }
 
 /* shared code */
 @media all and (max-width: 750px) {
   .list__item {
-/*  font-size: var(--font-medium);*/
+      font-size: var(--font-medium);
   }
 }
