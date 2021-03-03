@@ -28,8 +28,7 @@ let pokemonRepository = (function () {
       let listItem = document.createElement('li');      
       let button = document.createElement('button');
       button.innerText = pokemon.name;
-      button.classList.add('btn'); 
-      button.classList.add('list__item');
+      button.classList.add('btn','list__item');
       button.setAttribute('data-toggle', 'modal');
       button.setAttribute('data-target', '#pokemonModal');
       listItem.appendChild(button);
@@ -85,26 +84,30 @@ let pokemonRepository = (function () {
    function showModal(pokemon) {
       let modalContainer = document.querySelector('#pokemonModal');
 
-      let modalTitle = document.querySelector('.modal-title');
+      let modalHeader = document.querySelector('.modal-header');
       let modalBody = document.querySelector('.modal-body');
 
-      modalTitle.innerHTML = '';
+      modalHeader.innerHTML = '';
       modalBody.innerHTML = '';
 
       let contentName = document.createElement('h1');
       contentName.innerText = pokemon.name;   
-      modalTitle.appendChild(contentName);   
+      modalHeader.appendChild(contentName);   
 
-      let contentHeight = document.createElement('p');
-      contentHeight.innerText = 'Height: ' + pokemon.height;
+      let contentHeight = document.createElement('div');
+      contentHeight.classList.add('col');
+      contentHeight.innerHTML = '<p>Height: <br>' + pokemon.height + '</p>';
       modalBody.appendChild(contentHeight);
 
-      let contentWeight = document.createElement('p');
-      contentWeight.innerText = 'Weight: ' + pokemon.weight;
+      let contentWeight = document.createElement('div');
+      contentWeight.classList.add('col');
+      contentWeight.innerHTML = '<p>Weight: <br>' + pokemon.weight + '</p>';
       modalBody.appendChild(contentWeight); 
       
-      let contentTypes = document.createElement('p');
-      contentTypes.innerText = 'Types: '; 
+      
+      let contentTypes = document.createElement('div');
+      contentTypes.classList.add('col');
+      contentTypes.innerHTML = '<p>Types: </p>';
       modalBody.appendChild(contentTypes);
       
       // rendering the array of types
@@ -120,13 +123,12 @@ let pokemonRepository = (function () {
         typeElements.push(typeElement);
       });
       // appending types to modal:
-      modalBody.appendChild(contentTypes);
       typeElements.forEach((contentElement3) => {
-        modalBody.appendChild(contentElement3);
+        contentTypes.appendChild(contentElement3);
       });
        
       let pokeImage = document.createElement('img');
-      pokeImage.classList.add('modal-image');
+      pokeImage.classList.add('col-12','modal-image');
       pokeImage.src = pokemon.imageUrl;
       modalBody.appendChild(pokeImage);
     }
