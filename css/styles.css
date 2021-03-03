@@ -6,9 +6,9 @@
   --accent-color: #fc01b1;
   --font-sans: 'Karla', sans-serif;
   --font-serif: 'Lora', serif;
-  --font-big: 60px;
-  --font-medium: 25px;
-  --font-small: 15px;
+  --font-big: 2.5rem;
+  --font-medium: 1.2rem;
+  --font-small: 1rem;
   --font-heavy: 700;
   --font-light: 400;
 }
@@ -26,15 +26,15 @@ body {
   line-height: 1.6;
   background-color: var(--secondary-color);
   color: var(--dark-color);
-  padding: 30px;
-  padding-top: 80px;
+  padding: 2rem;
+  padding-top: 6rem;
   text-align: center;
 }
 
 .poke-list {
   list-style-type: none;
   display: inline;
-  margin-top: 70px;
+  margin-top: 2rem;
 }
 
 .page-header {
@@ -49,10 +49,6 @@ a:hover {
   color: var(--accent-color);
 }
 
-button {
-  margin-bottom: 10px;
-}
-
 .navbar-toggler{
     color: var(--accent-color);
     transform: rotate(90deg);
@@ -60,6 +56,10 @@ button {
 
 .navbar-brand{
     font-size: var(--font-medium);
+}
+
+button {
+  margin-bottom: 0.7rem;
 }
 
 button:active{
@@ -76,7 +76,7 @@ button:focus{
 
 .list__item {
   width: 100%;
-  padding: 20px;
+  padding: 1rem;
   background-color: var(--primary-color);
   color: var(--dark-color);
   font-size: var(--font-medium);
@@ -101,7 +101,7 @@ button:focus{
 }
 
 .error {
-  padding: 10px;
+  padding: 1rem;
   background-color: var(--accent-color);
   color: var(--primary-color);
   font-weight: var(--font-heavy);
@@ -109,13 +109,21 @@ button:focus{
 
 
 h1 {
-  text-align: center;
   text-transform: uppercase;
-  margin-top: 0;
 }
 
 p {
   margin-bottom: 0;
+}
+
+.modal-content{
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.modal-header{
+  border-bottom: 1px solid var(--accent-color);
+  padding-top: 0;
 }
 
 #image-container {
@@ -123,8 +131,15 @@ p {
 }
 
 .modal-image {
-  width: 60%;
-  padding: 30px;
+  padding: 3rem;
+}
+
+.close{
+  color: var(--accent-color);
+  font-size: var(--font-big);
+  text-align: right;
+  margin:0;
+  line-height: 0.5;
 }
 
 /* --- 2021-02-05 media queries --- */
