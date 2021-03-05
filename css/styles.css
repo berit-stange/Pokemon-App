@@ -6,7 +6,7 @@
   --accent-color: #fc01b1;
   --font-sans: 'Karla', sans-serif;
   --font-serif: 'Lora', serif;
-  --font-big: 2.5rem;
+  --font-big: 2rem;
   --font-medium: 1.2rem;
   --font-small: 1rem;
   --font-heavy: 700;
@@ -107,9 +107,9 @@ button:focus{
   font-weight: var(--font-heavy);
 }
 
-
 h1 {
   text-transform: uppercase;
+  font-size: var(--font-big);
 }
 
 p {
@@ -122,16 +122,19 @@ p {
 }
 
 .modal-header{
-  border-bottom: 1px solid var(--accent-color);
-  padding-top: 0;
-}
-
-#image-container {
-  display: grid;
+  border-bottom: 0px;
 }
 
 .modal-image {
   padding: 3rem;
+    display:block;
+    height: 90%;
+}
+
+.col{
+    padding: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+    border-top: 1px solid var(--accent-color);
 }
 
 .close{
@@ -142,31 +145,45 @@ p {
   line-height: 0.5;
 }
 
-/* --- 2021-02-05 media queries --- */
-
-@media all and (max-width: 500px) {
-  body{
+/* -------------- BOOTSTRAP BREAKPOINTS ---------------- */
+/*Small devices (landscape phones, 576px and up)*/
+@media (max-width: 576px) {
+  h1 {
     font-size: var(--font-small);
+      
   } 
-
-  .list__item {
+   .row{
       font-size: var(--font-small);
-  }
-    
-  .logo {
-    font-size: var(--font-medium);
+    }
+
+ }
+
+@media (min-width: 576px) {
+  body, h1 {
+/*    font-size: var(--font-big);*/
+  } 
+   .list__item{
+/*      font-size: var(--font-medium);*/
+    }
+
+ }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+  body{
+      
   }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px) {
-  .list__item {
-      font-size: var(--font-medium);
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+  body{
+      
   }
 }
 
-/* shared code */
-@media all and (max-width: 750px) {
-  .list__item {
-      font-size: var(--font-medium);
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  body{
   }
 }
