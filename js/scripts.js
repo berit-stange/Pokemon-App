@@ -1,6 +1,8 @@
 let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+    let modalHeader = document.querySelector('.modal-header');
+    let modalBody = document.querySelector('.modal-body');
 
     
     // function to add new Pokemons
@@ -59,8 +61,10 @@ let pokemonRepository = (function () {
 
 //takes a Pokémon item as an argument
   function loadDetails(item) {
+    showLoadingSpinner();
     let url = item.detailsUrl;
     return fetch(url).then(function (response) {
+      hideLoadingSpinner();
       return response.json();
     }).then(function (details) {
       // add the details to the item
@@ -80,12 +84,22 @@ let pokemonRepository = (function () {
     });
     }
     
+
+  function showLoadingSpinner() {
+    modalHeader.innerHTML = '';
+    modalBody.innerHTML = '';
+    let spinner = document.createElement('div');
+    modalBody.appendChild(spinner);
+    spinner.classList.add('spinner-grow','mx-auto','visible');
+  }
+
+   function hideLoadingSpinner() {
+    let spinner = document.querySelector('.spinner-grow');
+    spinner.classList.add('invisible');
+  }
+    
     //Modal showing details of selected Pokemon
    function showModal(pokemon) {
-      let modalContainer = document.querySelector('#pokemonModal');
-
-      let modalHeader = document.querySelector('.modal-header');
-      let modalBody = document.querySelector('.modal-body');
 
       modalHeader.innerHTML = '';
       modalBody.innerHTML = '';
@@ -141,7 +155,9 @@ let pokemonRepository = (function () {
         addListItem: addListItem,
         loadList: loadList,
         showDetails: showDetails,
-        showModal: showModal
+        showModal: showModal,
+        showLoadingSpinner: showLoadingSpinner,
+        hideLoadingSpinner: hideLoadingSpinner
     };
 })();
 
