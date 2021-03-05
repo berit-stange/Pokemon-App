@@ -146,10 +146,10 @@ p {
 }
 
 /* -------------- BOOTSTRAP BREAKPOINTS ---------------- */
-/*Small devices (landscape phones, 576px and up)*/
+/*Small devices (landscape phones, 576px)*/
 @media (max-width: 576px) {
   h1 {
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
       
   } 
    .row{
