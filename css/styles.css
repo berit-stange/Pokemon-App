@@ -159,8 +159,8 @@ p {
  }
 
 @media (min-width: 576px) {
-  body, h1 {
-/*    font-size: var(--font-big);*/
+  h1 {
+    font-size: var(--font-medium);
   } 
    .list__item{
 /*      font-size: var(--font-medium);*/
