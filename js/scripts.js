@@ -148,6 +148,21 @@ let pokemonRepository = (function () {
     }
 
     
+    // Search in List of Pokemon
+      let searchInput = document.querySelector('.search');
+      searchInput.addEventListener('input', function(){
+        let allPokemon = document.querySelectorAll('.group-list-item');
+        let filterValue = searchInput.value.toUpperCase();
+        allPokemon.forEach(function(item){
+            console.log(item.innerText);
+            if(item.innerText.toUpperCase().indexOf(filterValue) > -1){
+                item.style.display = '';
+            }else{
+                item.style.display = 'none';
+            }
+        })
+      });
+
 
     return {
         add: add,

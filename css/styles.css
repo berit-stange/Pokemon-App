@@ -58,6 +58,11 @@ a:hover {
     font-size: var(--font-medium);
 }
 
+input:focus{
+  border: none;
+  overflow: hidden;
+}
+
 button {
   margin-bottom: 0.7rem;
 }
