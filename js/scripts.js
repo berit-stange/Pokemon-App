@@ -2,7 +2,7 @@ let pokemonRepository = (function () {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=350';
     let modalHeader = document.querySelector('.modal-header');
-    let modalBody = document.querySelector('.modal-body');
+    let modalRow = document.querySelector('.row');
 
     
     // function to add new Pokemons
@@ -87,9 +87,9 @@ let pokemonRepository = (function () {
 
   function showLoadingSpinner() {
     modalHeader.innerHTML = '';
-    modalBody.innerHTML = '';
+    modalRow.innerHTML = '';
     let spinner = document.createElement('div');
-    modalBody.appendChild(spinner);
+    modalRow.appendChild(spinner);
     spinner.classList.add('spinner-grow','mx-auto','visible');
   }
 
@@ -102,7 +102,7 @@ let pokemonRepository = (function () {
    function showModal(pokemon) {
 
       modalHeader.innerHTML = '';
-      modalBody.innerHTML = '';
+      modalRow.innerHTML = '';
 
       let contentName = document.createElement('h1');
       contentName.innerText = pokemon.name;   
@@ -111,18 +111,18 @@ let pokemonRepository = (function () {
       let contentHeight = document.createElement('div');
       contentHeight.classList.add('col');
       contentHeight.innerHTML = '<p>Height: <br>' + pokemon.height + '</p>';
-      modalBody.appendChild(contentHeight);
+      modalRow.appendChild(contentHeight);
 
       let contentWeight = document.createElement('div');
       contentWeight.classList.add('col');
       contentWeight.innerHTML = '<p>Weight: <br>' + pokemon.weight + '</p>';
-      modalBody.appendChild(contentWeight); 
+      modalRow.appendChild(contentWeight); 
       
       
       let contentTypes = document.createElement('div');
       contentTypes.classList.add('col');
       contentTypes.innerHTML = '<p>Types: </p>';
-      modalBody.appendChild(contentTypes);
+      modalRow.appendChild(contentTypes);
       
       // rendering the array of types
       let typesArray = new Array;
@@ -144,7 +144,7 @@ let pokemonRepository = (function () {
       let pokeImage = document.createElement('img');
       pokeImage.classList.add('col-12','modal-image');
       pokeImage.src = pokemon.imageUrl;
-      modalBody.appendChild(pokeImage);
+      modalRow.appendChild(pokeImage);
     }
 
     
