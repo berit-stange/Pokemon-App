@@ -155,7 +155,7 @@ p {
 @media (max-width: 576px) {
   h1 {
     font-size: var(--font-medium);
-  } 
+  }
    .row{
       font-size: var(--font-small);
     }
@@ -164,7 +164,7 @@ p {
 @media (min-width: 576px) {
   h1 {
     font-size: var(--font-big);
-  } 
+  }
    .list__item{
 /*      font-size: var(--font-medium);*/
     }
@@ -176,4 +176,3 @@ p {
     justify-content: space-between;
     }
 }
-
