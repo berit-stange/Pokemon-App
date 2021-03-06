@@ -10,9 +10,12 @@ This App contains Pokemon content right now, but can be used for other content a
 * user can search for a specific name
 * On user action (clicking on button with list item), details are shown in a modal
 
-## Tech stack
+## Tech Stack
 * HTML
 * CSS
 * JavaScript
 * Bootstrap components (modal, grid, input search field)
 * External API (PokeAPI)
+
+
+[See Pokemon App ](https://berit-stange.github.io/information-app/)
