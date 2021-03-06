@@ -17,5 +17,5 @@ This App contains Pokemon content right now, but can be used for other content a
 * Bootstrap components (modal, grid, input search field)
 * External API (PokeAPI)
 
-https://berit-stange.github.io/information-app/ - automatic!
-[GitHub](https://berit-stange.github.io/information-app/)
+
+[See Pokemon App ](https://berit-stange.github.io/information-app/)
