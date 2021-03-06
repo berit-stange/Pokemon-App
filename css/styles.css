@@ -155,12 +155,10 @@ p {
 @media (max-width: 576px) {
   h1 {
     font-size: var(--font-medium);
-      
   } 
    .row{
       font-size: var(--font-small);
     }
-
  }
 
 @media (min-width: 576px) {
@@ -170,25 +168,12 @@ p {
    .list__item{
 /*      font-size: var(--font-medium);*/
     }
-
  }
-
-/*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-  body{
-      
-  }
-}
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-  body{
-      
-  }
+  .navbar-expand-lg {
+    justify-content: space-between;
+    }
 }
 
-/*Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-  body{
-  }
-}
