@@ -40,7 +40,7 @@ let pokemonRepository = (function() {
     listItem.appendChild(button);
     listItem.classList.add('group-list-item');
     listOfPokemon.appendChild(listItem);
-    button.addEventListener('click', function(event) {
+    button.addEventListener('click', function() {
       showDetails(pokemon);
     });
   }
@@ -61,7 +61,9 @@ let pokemonRepository = (function() {
         });
       })
       .catch(function(e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-enable no-console */
       });
   }
 
@@ -82,7 +84,9 @@ let pokemonRepository = (function() {
         item.types = details.types;
       })
       .catch(function(e) {
+        /* eslint-disable no-console */
         console.error(e);
+        /* eslint-enable no-console */
       });
   }
 
@@ -132,12 +136,12 @@ let pokemonRepository = (function() {
     // rendering the array of types
     let typesArray = new Array();
     pokemon.types.forEach(pokemonType => {
-      typeStr = pokemonType.type.name;
+      let typeStr = pokemonType.type.name;
       typesArray.push(typeStr);
     });
     let typeElements = new Array();
     typesArray.forEach(element3 => {
-      typeElement = document.createElement('p');
+      let typeElement = document.createElement('p');
       typeElement.innerText = element3;
       typeElements.push(typeElement);
     });
@@ -158,7 +162,6 @@ let pokemonRepository = (function() {
     let allPokemon = document.querySelectorAll('.group-list-item');
     let filterValue = searchInput.value.toUpperCase();
     allPokemon.forEach(function(item) {
-      console.log(item.innerText);
       if (item.innerText.toUpperCase().indexOf(filterValue) > -1) {
         item.style.display = '';
       } else {
