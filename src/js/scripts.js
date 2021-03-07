@@ -61,9 +61,7 @@ let pokemonRepository = (function() {
         });
       })
       .catch(function(e) {
-        /* eslint-disable no-console */
         console.error(e);
-        /* eslint-enable no-console */
       });
   }
 
@@ -84,9 +82,7 @@ let pokemonRepository = (function() {
         item.types = details.types;
       })
       .catch(function(e) {
-        /* eslint-disable no-console */
         console.error(e);
-        /* eslint-enable no-console */
       });
   }
 
