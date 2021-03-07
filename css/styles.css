@@ -163,6 +163,9 @@ p {
    .row{
       font-size: var(--font-small);
     }
+   .list__item {
+      font-size: var(--font-small);
+    }    
  }
 
 @media (min-width: 576px) {
