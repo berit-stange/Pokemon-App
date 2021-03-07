@@ -50,12 +50,16 @@ a:hover {
 }
 
 .navbar-toggler{
-    color: var(--accent-color);
-    transform: rotate(90deg);
+  color: var(--accent-color);
+  transform: rotate(90deg);
 }
 
 .navbar-brand{
-    font-size: var(--font-medium);
+  font-size: var(--font-medium);
+}
+
+.nav-item{
+    font-size: var(--font-small);
 }
 
 input:focus{
@@ -68,15 +72,15 @@ button {
 }
 
 button:active{
-    border: none;
-    box-shadow: none;
-    outline: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 button:focus{
-    border: none;
-    box-shadow: none;
-    outline: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
 }
 
 .list__item {
@@ -132,14 +136,14 @@ p {
 
 .modal-image {
   padding: 3rem;
-    display:block;
-    height: 90%;
+  display:block;
+  height: 90%;
 }
 
 .col{
-    padding: 1rem;
-    border-bottom: 1px solid var(--accent-color);
-    border-top: 1px solid var(--accent-color);
+  padding: 1rem;
+  border-bottom: 1px solid var(--accent-color);
+  border-top: 1px solid var(--accent-color);
 }
 
 .close{
@@ -165,14 +169,4 @@ p {
   h1 {
     font-size: var(--font-big);
   }
-   .list__item{
-/*      font-size: var(--font-medium);*/
-    }
- }
-
-/*Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .navbar-expand-lg {
-    justify-content: space-between;
-    }
 }
