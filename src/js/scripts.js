@@ -7,7 +7,7 @@ let pokemonRepository = (function() {
   // function to add new Pokemons
   function add(item) {
     if (typeof item === 'object') {
-      if (Object.keys('name' + 'detailsUrl' in item)) {
+      if (Object.keys( 'name' && 'detailsUrl' in item)) {
         pokemonList.push(item);
       }
     } else {
@@ -46,12 +46,28 @@ let pokemonRepository = (function() {
   }
 
   //fetch data from the API, then add each Pokémon in the fetched data to pokemonList with the add function
+  // function loadList() {
+  //   return fetch(apiUrl)
+  //     .then(function(response) {
+  //       return response.json();
+  //     })
+  //     .then(function(json) {
+  //       json.results.forEach(function(item) {
+  //         let pokemon = {
+  //           name: item.name,
+  //           detailsUrl: item.url
+  //         };
+  //         add(pokemon);
+  //       });
+  //     })
+  //     .catch(function(e) {
+  //       console.error(e);
+  //     });
+  // }
   function loadList() {
     return fetch(apiUrl)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(json) {
+      .then(response => response.json())
+      .then(json => {
         json.results.forEach(function(item) {
           let pokemon = {
             name: item.name,
@@ -64,6 +80,7 @@ let pokemonRepository = (function() {
         console.error(e);
       });
   }
+
 
   //takes a Pokémon item as an argument
   function loadDetails(item) {
@@ -167,14 +184,9 @@ let pokemonRepository = (function() {
   });
 
   return {
-    add: add,
-    getAll: getAll,
-    addListItem: addListItem,
-    loadList: loadList,
-    showDetails: showDetails,
-    showModal: showModal,
-    showLoadingSpinner: showLoadingSpinner,
-    hideLoadingSpinner: hideLoadingSpinner
+    getAll,
+    addListItem,
+    loadList
   };
 })();
 
