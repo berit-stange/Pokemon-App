@@ -23,6 +23,7 @@ This App contains Pokemon content right now, but can be used for other content a
 ## Next Steps
 * Rebuild the project + connect to a different API 
 * depending on content there will be other filter and sorting functions
+* for wide screens the list will be displayed in a grid
 
 ## Hosted Project
 See hosted version of Pokemon App:
