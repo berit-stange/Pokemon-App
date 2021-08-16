@@ -4,6 +4,9 @@
 This App loads data from an external API and enables the viewing of data points in detail.
 This App contains Pokemon content right now, but can be used for other content as well.
 
+![Pokemon Showcase](img/pokemon-app-in-use.gif)
+
+
 ## Key Features
 * Load data from an external source (Pokémon API): [ pokeapi.co ](https://pokeapi.co/).
 * View a list of items, sorted alphabetically
